@@ -213,7 +213,26 @@ namespace ConsoleApp2
                 Console.WriteLine(Square(n));
             }
         }
-        
+        #endregion
+            
+        #region zwraca true jezeli jest ta sama ilos x i o	
+        using System;
+        using System.Linq;
+
+        public class Program
+        {
+            public static bool countXandO(string input)
+            {
+                input = input.ToLower();
+                return input.Count(x => x == 'x') == input.Count(o => o == 'o') ? true : false;
+            }
+
+            public static void Main()
+            {
+                 string n = "xxoo";
+                 Console.WriteLine(countXandO(n));
+            }
+        }
         #endregion
     }
 }
