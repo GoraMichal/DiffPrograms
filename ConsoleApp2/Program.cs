@@ -198,6 +198,23 @@ namespace ConsoleApp2
             Console.ReadKey();
         }
         #endregion
+            
+        #region sprawdza czy liczba sie pierwiastkuje		
+        public class Program
+        {
+            public static bool Square(int n)
+            {
+                return Math.Sqrt(n) % 1 == 0;
+            }
+
+            public static void Main()
+            {	
+                int n = 100;
+                Console.WriteLine(Square(n));
+            }
+        }
+        
+        #endregion
     }
 }
 
