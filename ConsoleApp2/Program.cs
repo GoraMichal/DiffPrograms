@@ -252,6 +252,31 @@ namespace ConsoleApp2
             } 
         }
         #endregion
+            
+            
+        #region szukanie unikalnej liczby w tablicy
+        public class Program
+        {
+            public int GetUniqueNumber(IEnumerable<int> numbers)
+            {
+                List<int> numList = numbers.ToList();
+                numList.Sort();
+                if (numList[0] != numList[1])
+                {
+                    return numList[0];
+                }
+                return numList[numList.Count - 1];
+            }
+
+            public void Main(string[] args)
+            {
+                int[] numbers = {1, 1, 1, 1, 2, 1};
+                Console.WriteLine(GetUniqueNumber(numbers));
+            }
+        }
+            
+        #endregion  
+            
     }
 }
 
