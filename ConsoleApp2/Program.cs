@@ -166,7 +166,7 @@ namespace ConsoleApp2
         //}
         #endregion
 
-        #region Take, Skip (zwraca indeksy rownych sum tablicy z obu brzegow)
+        #region Take, Skip (zwraca indeksy rownych sum z brzegow tablicy)
         //static int Main(string[] args)
         //{
         //    int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
@@ -232,6 +232,24 @@ namespace ConsoleApp2
                  string n = "xxoo";
                  Console.WriteLine(countXandO(n));
             }
+        }
+        #endregion
+            
+        #region sortowanie stringow po dlugosci
+        public class Program
+        {
+             public static void Main() 
+             { 
+                string s = "Wydarzenie artystyczne oraz zjawisko społeczne obejmujące swoim zasięgiem."; 
+
+                string[] sWord = s.Split(' ', '.');
+                Array.Sort(sWord, (w1, w2) => w1.Length.CompareTo(w2.Length));
+
+                foreach(string text in sWord) 
+                { 
+                    Console.Write(text + " "); 
+                } 
+            } 
         }
         #endregion
     }
